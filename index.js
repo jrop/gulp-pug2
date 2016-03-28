@@ -11,7 +11,7 @@ function getPug(defaultOptions) {
 
 function makeVinylOptions(vFile, defaultOptions) {
 	var prod = process.env.NODE_ENV == 'production'
-	return _merge({ compileDebug: !prod, pretty: !prod }, defaultOptions, { filename: vFile.path })
+	return _merge({ compileDebug: !prod, pretty: !prod }, defaultOptions, { filename: vFile.path, frontMatter: vFile.frontMatter })
 }
 
 function renameVinylExt(vFile, newExt) {

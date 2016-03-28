@@ -8,7 +8,7 @@
     "coverage": "istanbul cover _mocha test/"
   },
   "keywords": [
-    "gulpplugin"
+    "gulpplugin", "pug", "jade"
   ],
   "author": "",
   "license": "ISC",
