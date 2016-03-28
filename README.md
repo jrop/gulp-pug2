@@ -1,4 +1,4 @@
-gulp-pugjs
+gulp-pug2
 ==========
 
 Pre-render or pre-compile Pug templates using Gulp.
@@ -6,7 +6,7 @@ Pre-render or pre-compile Pug templates using Gulp.
 ## Installation
 
 ```sh
-npm install --save-dev gulp-pugjs
+npm install --save-dev gulp-pug2
 ```
 
 ## Use
