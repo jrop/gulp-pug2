@@ -1,7 +1,13 @@
 gulp-pug2
-==========
+=========
 
-Pre-render or pre-compile Pug templates using Gulp.
+> Pre-render or pre-compile Pug templates using Gulp.
+
+[![Travis CI](https://travis-ci.org/jrop/gulp-pug2.svg)](https://travis-ci.org/jrop/gulp-pug2)
+[![Coverage Status](https://coveralls.io/repos/github/jrop/gulp-pug2/badge.svg?branch=master)](https://coveralls.io/github/jrop/gulp-pug2?branch=master)
+
+[![NPM](https://nodei.co/npm/gulp-pug2.png)](https://nodei.co/npm/gulp-pug2/)
+
 
 ## Installation
 
@@ -14,7 +20,9 @@ npm install --save-dev gulp-pug2
 Use in your gulpfile like so:
 
 ```js
-const pug = require('gulp-pugjs')
+'use strict'
+
+const pug = require('gulp-pug2')
 
 gulp.task('views:render', function() {
     return gulp.src('your/files/example.pug')
@@ -36,13 +44,15 @@ gulp.task('views:compile', function() {
 })
 ```
 
+Furthermore, data passed via the vinyl file object (for example, with plugins such as `gulp-data` or `gulp-front-matter`) is preserved and avalable as locals (`data` or `frontMatter`, respectively).
+
 ## Options
 
 See the pug API for options you may pass.  Additionally, you may pass your own pug instance by setting `options.pug`.
 
 ## Contributing
 
-This module is still kind of bare-bones, but I wanted to extend on what `gulp-pug` already did.  If you want to contribute, open an issue and/or submit a pull request!
+If you want to contribute, open an issue and/or submit a pull request.
 
 ## License
 

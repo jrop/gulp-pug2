@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/",
-    "coverage": "istanbul cover _mocha test/"
+    "coverage": "istanbul cover _mocha test/",
+	"coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
-    "gulpplugin", "pug", "jade"
+    "gulpplugin",
+    "pug",
+    "jade"
   ],
   "author": "",
   "license": "ISC",
@@ -21,8 +24,10 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "co": "^4.6.0",
+    "coveralls": "^2.11.9",
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.2.0",
     "vinyl-fs": "^2.4.2"
   }
 }
