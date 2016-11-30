@@ -1,12 +1,12 @@
 {
   "name": "gulp-pug2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/",
     "coverage": "istanbul cover _mocha test/",
-	"coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "gulpplugin",
@@ -29,5 +29,8 @@
     "mocha": "^2.4.5",
     "mocha-lcov-reporter": "^1.2.0",
     "vinyl-fs": "^2.4.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

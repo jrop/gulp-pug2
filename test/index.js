@@ -37,17 +37,22 @@ describe('gulp-pug2', function () {
 			}))
 	})
 
-	it('render should throw errors non-bufferred content', co.wrap(function * (done) {
+	it('should emit an error for bad input', co.wrap(function * () {
+		yield streamShouldError(vfs.src('test/error.pug')
+			.pipe(pug()))
+	}))
+
+	it('render should throw errors non-bufferred content', co.wrap(function * () {
 		yield streamShouldError(vfs.src('test/sample.pug', { buffer: false })
 			.pipe(pug()))
 	}))
 
-	it('render should throw errors non-read content', co.wrap(function * (done) {
+	it('render should throw errors non-read content', co.wrap(function * () {
 		yield streamShouldError(vfs.src('test/sample.pug', { read: false })
 			.pipe(pug()))
 	}))
 
-	it('compile should throw errors non-bufferred content', co.wrap(function * (done) {
+	it('compile should throw errors non-bufferred content', co.wrap(function * () {
 		yield streamShouldError(vfs.src('test/sample.pug', { buffer: false })
 			.pipe(pug.compile()))
 	}))
