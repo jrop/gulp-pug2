@@ -1,6 +1,8 @@
 gulp-pug2
 =========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jrop/gulp-pug2.svg)](https://greenkeeper.io/)
+
 > Pre-render or pre-compile Pug templates using Gulp.
 
 [![Travis CI](https://travis-ci.org/jrop/gulp-pug2.svg)](https://travis-ci.org/jrop/gulp-pug2)
